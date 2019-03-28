@@ -1,0 +1,39 @@
+﻿@page
+<form class="mt-3">
+    <div class="form-group">
+        <label>User:</label>
+        <input type="text" class="form-control" id="userInput">
+    </div>
+    <div class="form-group">
+        <label>Message:</label>
+        <input type="text" class="form-control" id="messageInput">
+    </div>
+    <input type="button" class="btn btn-primary" id="sendButton" value="Send Message" />
+</form>
+<div class="row mt-3">
+    <ul id="messagesList"></ul>
+</div>
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+    connection.on("ReceiveMessage", function (user, message) {
+        var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var li = document.createElement("li");
+        li.textContent = user + " says " + msg;
+        document.getElementById("messagesList").appendChild(li);
+    });
+
+    connection.start();
+
+    document.getElementById("sendButton").addEventListener("click", function (event) {
+        event.preventDefault();
+        var user = document.getElementById("userInput").value;
+        var message = document.getElementById("messageInput").value;
+        connection.invoke("SendMessage", user, message).catch(function (err) {
+            return console.error(err.toString());
+        });
+    });
+
+</script>
