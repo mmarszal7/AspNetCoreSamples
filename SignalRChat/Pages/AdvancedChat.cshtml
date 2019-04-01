@@ -35,26 +35,31 @@
     </div>
 
     <script>
+        var username = `cookie-${Math.random().toString(36).substring(2, 10)}`;
         var connection = new signalR.HubConnectionBuilder().withUrl("/advancedHub").build();
+        connection.on("ReceiveMessage", messageHandler);
+        connection.on("_BROADCAST_", messageHandler);
+        connection.on("_SYSTEM_", messageHandler);
+        connection.user = username;
         connection.start();
-        //connection.invoke("BroadcastMessage", '_SYSTEM_', username + ' JOINED');
 
-        // Get the user name and store it to prepend to messages.
-        var authType = "cookie";
-        var username = `${authType}-` + generateRandomName();
-
-        function generateRandomName() {
-            return Math.random().toString(36).substring(2, 10);
+        function messageHandler(user, message) {
+            console.log("Message: " + message);
+            var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            var messageEntry = createMessageEntry(user, msg);
+            var messageBox = document.getElementById('messages');
+            messageBox.appendChild(messageEntry);
+            messageBox.scrollTop = messageBox.scrollHeight;
         }
 
-        // Set initial focus to message input box.
         var messageInput = document.getElementById('message');
-        messageInput.focus();
         var groupOperationInput = document.getElementById('groupoperationname');
         var groupInput = document.getElementById('groupname');
         var userInput = document.getElementById('username');
+        messageInput.focus();
 
         function createMessageEntry(encodedName, encodedMsg) {
+            console.log("Message from: " + encodedName);
             var entry = document.createElement('div');
             entry.classList.add("message-entry");
             if (encodedName === "_SYSTEM_") {
@@ -72,13 +77,6 @@
                     `<div class="message-content pull-left">${encodedMsg}<div>`;
             }
             return entry;
-        }
-
-        function appendMessage(encodedName, encodedMsg) {
-            var messageEntry = createMessageEntry(encodedName, encodedMsg);
-            var messageBox = document.getElementById('messages');
-            messageBox.appendChild(messageEntry);
-            messageBox.scrollTop = messageBox.scrollHeight;
         }
 
         document.getElementById('sendmessage').addEventListener('click', function (event) {
