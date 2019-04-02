@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace RedisCache
 {
@@ -23,6 +24,8 @@ namespace RedisCache
 
             var connectionMultiplexer = ConnectionMultiplexer.Connect("localhost:6379");
             services.AddScoped<IDatabase>(_ => connectionMultiplexer.GetDatabase(0));
+
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +35,13 @@ namespace RedisCache
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API docs");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseMvc();
         }
