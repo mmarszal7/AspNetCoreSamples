@@ -4,6 +4,6 @@ Collection of ASP.NET Core projects caintaining configuration and simple usage o
 # Plans:
 - OData
 - Swagger 
-- Redis (as caching mechanism)
+- Redis (attribute caching)
 - [safe storage of app secrets](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=windows&fbclid=IwAR2nrYRvRMCrU1VyFIECFoyyCaP2OO0e4KRFzMF27S64exgs-xz5xXDerGQ)
 - Mongo CRUD?

@@ -25,6 +25,7 @@ namespace RedisCache
             var connectionMultiplexer = ConnectionMultiplexer.Connect("localhost:6379");
             services.AddScoped<IDatabase>(_ => connectionMultiplexer.GetDatabase(0));
 
+            // Swagger
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
         }
 
@@ -36,11 +37,11 @@ namespace RedisCache
                 app.UseDeveloperExceptionPage();
             }
 
+            // Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API docs");
-                c.RoutePrefix = string.Empty;
             });
 
             app.UseMvc();
