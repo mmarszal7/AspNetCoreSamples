@@ -17,25 +17,42 @@ namespace RedisCache
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            // CORS
+            services.AddCors(o => o.AddPolicy("EverythingOpened", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
+            // Redis Cache
             var connectionMultiplexer = ConnectionMultiplexer.Connect("localhost:6379");
             services.AddScoped<IDatabase>(_ => connectionMultiplexer.GetDatabase(0));
+
+            // Memory Cache
+            services.AddMemoryCache();
+
+            // Response/Client-side cache
+            services.AddResponseCaching();
 
             // Swagger
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseCors("AllowAll");
             }
+
+            // Response/Client-side cache
+            app.UseResponseCaching();
 
             // Swagger
             app.UseSwagger();
