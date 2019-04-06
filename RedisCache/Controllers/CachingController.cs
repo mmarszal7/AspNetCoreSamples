@@ -20,7 +20,7 @@ namespace RedisCache.Controllers
             MemoryCache = memoryCache;
         }
 
-        [HttpPost()]
+        [HttpPost]
         [Route("redisCaching")]
         public async Task<string> RedisCaching(string key)
         {
@@ -34,7 +34,7 @@ namespace RedisCache.Controllers
             return result;
         }
 
-        [HttpPost()]
+        [HttpPost]
         [Route("memoryCaching")]
         public async Task<string> MemoryCaching(string key)
         {
@@ -56,8 +56,9 @@ namespace RedisCache.Controllers
             return result;
         }
 
-        [HttpGet()]
+        [HttpGet]
         [Route("responseCaching")]
+        [ResponseCache(Duration = 86400, Location = ResponseCacheLocation.Client)]
         public async Task<string> ClientSideCaching()
         {
             var result = await LongRunningOperation;

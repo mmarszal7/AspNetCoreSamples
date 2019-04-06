@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{48A8889A-D96F-456E-B56D-D13E4BF0DCE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisCache", "RedisCache\RedisCache.csproj", "{160DDAEE-BA63-433B-B4EA-AC52D4E5C978}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisCache", "RedisCache\RedisCache.csproj", "{160DDAEE-BA63-433B-B4EA-AC52D4E5C978}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D66D2CB6-C6A6-4867-84B9-374DB6E35CBB}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

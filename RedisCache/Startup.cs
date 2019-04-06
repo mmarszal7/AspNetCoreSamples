@@ -30,7 +30,7 @@ namespace RedisCache
             }));
 
             // Redis Cache
-            var connectionMultiplexer = ConnectionMultiplexer.Connect("localhost:6379");
+            var connectionMultiplexer = ConnectionMultiplexer.Connect("52.142.236.135:6379");
             services.AddScoped<IDatabase>(_ => connectionMultiplexer.GetDatabase(0));
 
             // Memory Cache
@@ -53,13 +53,16 @@ namespace RedisCache
 
             // Response/Client-side cache
             app.UseResponseCaching();
-
+            
             // Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API docs");
             });
+
+            // Middleware
+            app.UseMiddleware<CustomMiddleware>();
 
             app.UseMvc();
         }
