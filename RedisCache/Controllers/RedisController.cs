@@ -21,16 +21,16 @@ namespace RedisCache.Controllers
             RedisDatabase = database;
         }
 
-        [HttpGet("{key}")]
-        public Task<RedisValue> Get(string key)
-        {
-            return RedisDatabase.StringGetAsync(key);
-        }
-
         [HttpPost()]
         public Task Set(Record record)
         {
             return RedisDatabase.StringSetAsync(record.Key, record.Value);
+        }
+
+        [HttpGet("{key}")]
+        public Task<RedisValue> Get(string key)
+        {
+            return RedisDatabase.StringGetAsync(key);
         }
     }
 }

@@ -12,12 +12,11 @@ RedisCache:
 	- distributed - via Redis
 	- in-memory
 	- reponse/client-side caching - support for GET - "HTTP never supported caching for POST"
+- [Windows Secret manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=windows&fbclid=IwAR2nrYRvRMCrU1VyFIECFoyyCaP2OO0e4KRFzMF27S64exgs-xz5xXDerGQ)
 
 # Plans:
-- caching middleware?
-- filtering (e.g. exception filter)
 - OData
 - publish/subscribe with Redis & RabbitMQ
-- [safe storage of app secrets](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=windows&fbclid=IwAR2nrYRvRMCrU1VyFIECFoyyCaP2OO0e4KRFzMF27S64exgs-xz5xXDerGQ)
 - [profiler setup](https://adamsitnik.com/speedscope/?utm_source=csharpdigest&utm_medium=web&utm_campaign=featured)
+- ElasticSearch
 - Mongo - CRUD?
