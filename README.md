@@ -15,13 +15,11 @@ RedisCache:
 - [Windows Secret manager](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=windows&fbclid=IwAR2nrYRvRMCrU1VyFIECFoyyCaP2OO0e4KRFzMF27S64exgs-xz5xXDerGQ)
 
 MongoCrud:
-- MongoDB.Driver CRUD
-- OData
-- Default Interface Methods
+- [MongoDB.Driver CRUD](http://selfdocumenting.net/a-quick-mongodb-repository/)
+- [OData](https://www.youtube.com/watch?v=ZCDWUBOJ5FU&list=PL17WHdN9gS1uXtfhSPjGwIxAGGUJqFPWx&index=46&t=0s)
 - Docker
 
 # Plans:
-- Mongo - CRUD + OData
 - ElasticSearch
 - publish/subscribe with Redis & RabbitMQ
 
