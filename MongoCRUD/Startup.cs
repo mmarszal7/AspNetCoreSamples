@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNet.OData.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -24,8 +25,12 @@ namespace MongoCRUD
             // Swagger
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
 
+            // MongoDB - default connectionString: mongodb://localhost:27017
             var mongoClient = new MongoClient(Configuration["MongoConnection"]);
             services.AddScoped<IMongoDatabase>(_ => mongoClient.GetDatabase("demoDatabase"));
+
+            // OData
+            services.AddOData();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -42,7 +47,12 @@ namespace MongoCRUD
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API docs");
             });
 
-            app.UseMvc();
+            app.UseMvc(routeBuilder =>
+            {
+                // OData
+                routeBuilder.EnableDependencyInjection();
+                routeBuilder.Expand().Select().Count().OrderBy().Filter();
+            });
         }
     }
 }

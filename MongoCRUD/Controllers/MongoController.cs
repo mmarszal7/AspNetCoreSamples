@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using System.Collections.Generic;
 
@@ -22,7 +23,9 @@ namespace MongoCRUD.Controllers
         }
 
         // GET api/mongo
+        // OData example: /api/mongo?$select=id
         [HttpGet]
+        [EnableQuery()]
         public ActionResult<IEnumerable<Record>> Get()
         {
             return MongoDatabase.GetCollection<Record>("Records")
