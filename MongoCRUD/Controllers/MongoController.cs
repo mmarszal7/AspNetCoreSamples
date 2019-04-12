@@ -1,15 +1,13 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using MongoCRUD.Model;
 using MongoDB.Driver;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MongoCRUD.Controllers
 {
-    public class Record
-    {
-        public int Id { get; set; }
-        public string Value { get; set; }
-    }
 
     [Route("api/[controller]")]
     [ApiController]
@@ -17,13 +15,14 @@ namespace MongoCRUD.Controllers
     {
         public IMongoDatabase MongoDatabase { get; }
 
-        public MongoController(IMongoDatabase mongoDatabase)
+        public MongoController(IMongoDatabase mongoDatabase, IConfiguration configuration)
         {
             MongoDatabase = mongoDatabase;
+
         }
 
         // GET api/mongo
-        // OData example: /api/mongo?$select=id
+        // OData example: /api/mongo?$select=Id,Value&$OrderBy=Timestamp&$Filter=Id lt 3
         [HttpGet]
         [EnableQuery()]
         public ActionResult<IEnumerable<Record>> Get()
