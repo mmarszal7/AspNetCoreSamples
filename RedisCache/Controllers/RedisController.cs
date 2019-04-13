@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
+using System;
 using System.Threading.Tasks;
 
 namespace RedisCache.Controllers
@@ -24,7 +25,7 @@ namespace RedisCache.Controllers
         [HttpPost()]
         public Task Set(Record record)
         {
-            return RedisDatabase.StringSetAsync(record.Key, record.Value);
+            return RedisDatabase.StringSetAsync(record.Key, record.Value, expiry: new TimeSpan(1, 0, 0, 0));
         }
 
         [HttpGet("{key}")]
