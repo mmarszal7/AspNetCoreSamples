@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoCRUD.Model;
 using MongoDB.Driver;
-using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Linq;
 
@@ -25,9 +24,6 @@ namespace MongoCRUD
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            // Swagger
-            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
-
             // MongoDB - default connectionString: mongodb://localhost:27017
             var mongoClient = new MongoClient(Configuration["MongoConnection"]);
             var db = mongoClient.GetDatabase("demoDatabase");
@@ -44,13 +40,6 @@ namespace MongoCRUD
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            // Swagger
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API docs");
-            });
 
             app.UseMvc(routeBuilder =>
             {

@@ -18,7 +18,7 @@ MongoCrud:
 - MongoDB.Driver CRUD
 - [OData](https://www.youtube.com/watch?v=ZCDWUBOJ5FU&list=PL17WHdN9gS1uXtfhSPjGwIxAGGUJqFPWx&index=46&t=0s)
 - [AutoMapper](https://automapper.readthedocs.io/en/latest/Getting-started.html) - Entities <-> DTO
-- Docker
+- [Docker](http://tattoocoder.com/using-asp-net-core-with-mongodb-in-containers-for-local-dev-cosmosdb-for-production/)
 
 # Plans:
 - ElasticSearch

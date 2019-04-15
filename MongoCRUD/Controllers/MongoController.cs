@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using MongoCRUD.Model;
 using MongoDB.Driver;
 using System.Collections.Generic;
@@ -15,7 +14,7 @@ namespace MongoCRUD.Controllers
     {
         public IMongoDatabase MongoDatabase { get; }
 
-        public MongoController(IMongoDatabase mongoDatabase, IConfiguration configuration)
+        public MongoController(IMongoDatabase mongoDatabase)
         {
             MongoDatabase = mongoDatabase;
 
