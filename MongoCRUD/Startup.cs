@@ -6,7 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoCRUD.Model;
 using MongoDB.Driver;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace MongoCRUD
@@ -62,6 +65,12 @@ namespace MongoCRUD
                 .InsertManyAsync((new int[] { 0, 1, 2, 3, 4 })
                     .Select(i => new Event() { Id = i, Reason = "Reason number " + i })
                 );
+
+            var json = File.ReadAllText("./populationByDistrict.json");
+            var population = JsonConvert.DeserializeObject<List<Population>>(json);
+            MongoDatabase.DropCollection("Population");
+            MongoDatabase.GetCollection<Population>("Population")
+                .InsertManyAsync(population);
         }
     }
 }

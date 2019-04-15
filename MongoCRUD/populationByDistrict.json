@@ -1,533 +1,651 @@
-[  
-   {  
-      "1970":"138557",
-      "1980":"78441",
-      "1990":"77214",
-      "2000":"82159",
-      "2010":"91497",
-      "district":"Bronx",
-      "details":"Melrose, Mott Haven, Port Morris"
-   },
-   {  
-      "1970":"99493",
-      "1980":"34399",
-      "1990":"39443",
-      "2000":"46824",
-      "2010":"52246",
-      "district":"Bronx",
-      "details":"Hunts Point, Longwood"
-   },
-   {  
-      "1970":"150636",
-      "1980":"53635",
-      "1990":"57162",
-      "2000":"68574",
-      "2010":"79762",
-      "district":"Bronx",
-      "details":"Morrisania, Crotona Park East"
-   },
-   {  
-      "1970":"144207",
-      "1980":"114312",
-      "1990":"119962",
-      "2000":"139563",
-      "2010":"146441",
-      "district":"Bronx",
-      "details":"Highbridge, Concourse Village"
-   },
-   {  
-      "1970":"121807",
-      "1980":"107995",
-      "1990":"118435",
-      "2000":"128313",
-      "2010":"128200",
-      "district":"Bronx",
-      "details":"University Hts., Fordham, Mt. Hope"
-   },
-   {  
-      "1970":"114137",
-      "1980":"65016",
-      "1990":"68061",
-      "2000":"75688",
-      "2010":"83268",
-      "district":"Bronx",
-      "details":"East Tremont, Belmont"
-   },
-   {  
-      "1970":"113764",
-      "1980":"116827",
-      "1990":"128588",
-      "2000":"141411",
-      "2010":"139286",
-      "district":"Bronx",
-      "details":"Bedford Park, Norwood, Fordham"
-   },
-   {  
-      "1970":"103543",
-      "1980":"98275",
-      "1990":"97030",
-      "2000":"101332",
-      "2010":"101731",
-      "district":"Bronx",
-      "details":"Riverdale, Kingsbridge, Marble Hill"
-   },
-   {  
-      "1970":"166442",
-      "1980":"167627",
-      "1990":"155970",
-      "2000":"167859",
-      "2010":"172298",
-      "district":"Bronx",
-      "details":"Soundview, Parkchester"
-   },
-   {  
-      "1970":"84948",
-      "1980":"106516",
-      "1990":"108093",
-      "2000":"115948",
-      "2010":"120392",
-      "district":"Bronx",
-      "details":"Throgs Nk., Co-op City, Pelham Bay"
-   },
-   {  
-      "1970":"105980",
-      "1980":"99080",
-      "1990":"97842",
-      "2000":"110706",
-      "2010":"113232",
-      "district":"Bronx",
-      "details":"Pelham Pkwy, Morris Park, Laconia"
-   },
-   {  
-      "1970":"135010",
-      "1980":"128226",
-      "1990":"129620",
-      "2000":"149077",
-      "2010":"152344",
-      "district":"Bronx",
-      "details":"Wakefield, Williamsbridge"
-   },
-   {  
-      "1970":"179390",
-      "1980":"142942",
-      "1990":"155972",
-      "2000":"160338",
-      "2010":"173083",
-      "district":"Brooklyn",
-      "details":"Williamsburg, Greenpoint"
-   },
-   {  
-      "1970":"110221",
-      "1980":"92732",
-      "1990":"94534",
-      "2000":"98620",
-      "2010":"99617",
-      "district":"Brooklyn",
-      "details":"Brooklyn Heights, Fort Greene"
-   },
-   {  
-      "1970":"203380",
-      "1980":"133379",
-      "1990":"138696",
-      "2000":"143867",
-      "2010":"152985",
-      "district":"Brooklyn",
-      "details":"Bedford Stuyvesant"
-   },
-   {  
-      "1970":"137902",
-      "1980":"92497",
-      "1990":"102572",
-      "2000":"104358",
-      "2010":"112634",
-      "district":"Brooklyn",
-      "details":"Bushwick"
-   },
-   {  
-      "1970":"170791",
-      "1980":"154931",
-      "1990":"161350",
-      "2000":"173198",
-      "2010":"182896",
-      "district":"Brooklyn",
-      "details":"East New York, Starrett City"
-   },
-   {  
-      "1970":"138933",
-      "1980":"110228",
-      "1990":"102724",
-      "2000":"104054",
-      "2010":"104709",
-      "district":"Brooklyn",
-      "details":"Park Slope, Carroll Gardens"
-   },
-   {  
-      "1970":"111607",
-      "1980":"98567",
-      "1990":"102553",
-      "2000":"120063",
-      "2010":"126230",
-      "district":"Brooklyn",
-      "details":"Sunset Park, Windsor Terrace"
-   },
-   {  
-      "1970":"121821",
-      "1980":"88796",
-      "1990":"96400",
-      "2000":"96076",
-      "2010":"96317",
-      "district":"Brooklyn",
-      "details":"Crown Heights North"
-   },
-   {  
-      "1970":"101047",
-      "1980":"96669",
-      "1990":"110715",
-      "2000":"104014",
-      "2010":"98429",
-      "district":"Brooklyn",
-      "details":"Crown Heights South, Wingate"
-   },
-   {  
-      "1970":"129822",
-      "1980":"118187",
-      "1990":"110612",
-      "2000":"122542",
-      "2010":"124491",
-      "district":"Brooklyn",
-      "details":"Bay Ridge, Dyker Heights"
-   },
-   {  
-      "1970":"170119",
-      "1980":"155072",
-      "1990":"149994",
-      "2000":"172129",
-      "2010":"181981",
-      "district":"Brooklyn",
-      "details":"Bensonhurst, Bath Beach "
-   },
-   {  
-      "1970":"166301",
-      "1980":"155899",
-      "1990":"160018",
-      "2000":"185046",
-      "2010":"191382",
-      "district":"Brooklyn",
-      "details":"Borough Park, Ocean Parkway"
-   },
-   {  
-      "1970":"97750",
-      "1980":"100030",
-      "1990":"102596",
-      "2000":"106120",
-      "2010":"104278",
-      "district":"Brooklyn",
-      "details":"Coney Island, Brighton Beach"
-   },
-   {  
-      "1970":"137041",
-      "1980":"143859",
-      "1990":"159825",
-      "2000":"168806",
-      "2010":"160664",
-      "district":"Brooklyn",
-      "details":"Flatbush, Midwood"
-   },
-   {  
-      "1970":"164815",
-      "1980":"149572",
-      "1990":"143477",
-      "2000":"160319",
-      "2010":"159650",
-      "district":"Brooklyn",
-      "details":"Sheepshead Bay, Gerritsen Beach"
-   },
-   {  
-      "1970":"122589",
-      "1980":"73801",
-      "1990":"84923",
-      "2000":"85343",
-      "2010":"86468",
-      "district":"Brooklyn",
-      "details":"Brownsville, Ocean Hill"
-   },
-   {  
-      "1970":"149496",
-      "1980":"154596",
-      "1990":"161261",
-      "2000":"165753",
-      "2010":"155252",
-      "district":"Brooklyn",
-      "details":"East Flatbush, Rugby, Farragut"
-   },
-   {  
-      "1970":"188643",
-      "1980":"169092",
-      "1990":"162428",
-      "2000":"194653",
-      "2010":"193543",
-      "district":"Brooklyn",
-      "details":"Canarsie, Flatlands"
-   },
-   {  
-      "1970":"7706",
-      "1980":"15918",
-      "1990":"25366",
-      "2000":"34420",
-      "2010":"60978",
-      "district":"Manhattan",
-      "details":"Battery Park City, Tribeca"
-   },
-   {  
-      "1970":"84337",
-      "1980":"87069",
-      "1990":"94105",
-      "2000":"93119",
-      "2010":"90016",
-      "district":"Manhattan",
-      "details":"Greenwich Village, Soho"
-   },
-   {  
-      "1970":"181845",
-      "1980":"154848",
-      "1990":"161617",
-      "2000":"164407",
-      "2010":"163277",
-      "district":"Manhattan",
-      "details":"Lower East Side, Chinatown"
-   },
-   {  
-      "1970":"83601",
-      "1980":"82164",
-      "1990":"84431",
-      "2000":"87479",
-      "2010":"103245",
-      "district":"Manhattan",
-      "details":"Chelsea, Clinton"
-   },
-   {  
-      "1970":"31076",
-      "1980":"39544",
-      "1990":"43507",
-      "2000":"44028",
-      "2010":"51673",
-      "district":"Manhattan",
-      "details":"Midtown Business District"
-   },
-   {  
-      "1970":"122465",
-      "1980":"127554",
-      "1990":"133748",
-      "2000":"136152",
-      "2010":"142745",
-      "district":"Manhattan",
-      "details":"Stuyvesant Town, Turtle Bay"
-   },
-   {  
-      "1970":"212422",
-      "1980":"206669",
-      "1990":"210993",
-      "2000":"207699",
-      "2010":"209084",
-      "district":"Manhattan",
-      "details":"West Side, Upper West Side"
-   },
-   {  
-      "1970":"200851",
-      "1980":"204305",
-      "1990":"210880",
-      "2000":"217063",
-      "2010":"219920",
-      "district":"Manhattan",
-      "details":"Upper East Side"
-   },
-   {  
-      "1970":"113606",
-      "1980":"103038",
-      "1990":"106978",
-      "2000":"111724",
-      "2010":"110193",
-      "district":"Manhattan",
-      "details":"Manhattanville, Hamilton Heights"
-   },
-   {  
-      "1970":"159267",
-      "1980":"105641",
-      "1990":"99519",
-      "2000":"107109",
-      "2010":"115723",
-      "district":"Manhattan",
-      "details":"Central Harlem"
-   },
-   {  
-      "1970":"154662",
-      "1980":"114569",
-      "1990":"110508",
-      "2000":"117743",
-      "2010":"120511",
-      "district":"Manhattan",
-      "details":"East Harlem"
-   },
-   {  
-      "1970":"180561",
-      "1980":"179941",
-      "1990":"198192",
-      "2000":"208414",
-      "2010":"190020",
-      "district":"Manhattan",
-      "details":"Washington Heights, Inwood"
-   },
-   {  
-      "1970":"185925",
-      "1980":"185198",
-      "1990":"188549",
-      "2000":"211220",
-      "2010":"191105",
-      "district":"Queens",
-      "details":"Astoria, Long Island City"
-   },
-   {  
-      "1970":"95073",
-      "1980":"88927",
-      "1990":"94845",
-      "2000":"109920",
-      "2010":"113200",
-      "district":"Queens",
-      "details":"Sunnyside, Woodside"
-   },
-   {  
-      "1970":"123635",
-      "1980":"122090",
-      "1990":"128924",
-      "2000":"169083",
-      "2010":"171576",
-      "district":"Queens",
-      "details":"Jackson Heights, North Corona"
-   },
-   {  
-      "1970":"108233",
-      "1980":"118430",
-      "1990":"137023",
-      "2000":"167005",
-      "2010":"172598",
-      "district":"Queens",
-      "details":"Elmhurst, South Corona"
-   },
-   {  
-      "1970":"161022",
-      "1980":"150142",
-      "1990":"149126",
-      "2000":"165911",
-      "2010":"169190",
-      "district":"Queens",
-      "details":"Ridgewood, Glendale, Maspeth"
-   },
-   {  
-      "1970":"120429",
-      "1980":"112245",
-      "1990":"106996",
-      "2000":"115967",
-      "2010":"113257",
-      "district":"Queens",
-      "details":"Forest Hills, Rego Park"
-   },
-   {  
-      "1970":"207589",
-      "1980":"204785",
-      "1990":"220508",
-      "2000":"242952",
-      "2010":"247354",
-      "district":"Queens",
-      "details":"Flushing, Bay Terrace"
-   },
-   {  
-      "1970":"142468",
-      "1980":"125312",
-      "1990":"132101",
-      "2000":"146594",
-      "2010":"151107",
-      "district":"Queens",
-      "details":"Fresh Meadows, Briarwood"
-   },
-   {  
-      "1970":"110367",
-      "1980":"109505",
-      "1990":"112151",
-      "2000":"141608",
-      "2010":"143317",
-      "district":"Queens",
-      "details":"Woodhaven, Richmond Hill"
-   },
-   {  
-      "1970":"113857",
-      "1980":"105651",
-      "1990":"107768",
-      "2000":"127274",
-      "2010":"122396",
-      "district":"Queens",
-      "details":"Ozone Park, Howard Beach"
-   },
-   {  
-      "1970":"127883",
-      "1980":"110963",
-      "1990":"108056",
-      "2000":"116404",
-      "2010":"116431",
-      "district":"Queens",
-      "details":"Bayside, Douglaston, Little Neck"
-   },
-   {  
-      "1970":"206639",
-      "1980":"189383",
-      "1990":"201293",
-      "2000":"223602",
-      "2010":"225919",
-      "district":"Queens",
-      "details":"Jamaica, St. Albans, Hollis"
-   },
-   {  
-      "1970":"184647",
-      "1980":"173178",
-      "1990":"177535",
-      "2000":"196284",
-      "2010":"188593",
-      "district":"Queens",
-      "details":"Queens Village, Rosedale"
-   },
-   {  
-      "1970":"98228",
-      "1980":"100592",
-      "1990":"100596",
-      "2000":"106686",
-      "2010":"114978",
-      "district":"Queens",
-      "details":"The Rockaways, Broad Channel"
-   },
-   {  
-      "1970":"135875",
-      "1980":"138489",
-      "1990":"137806",
-      "2000":"162609",
-      "2010":"175756",
-      "district":"Staten Island",
-      "details":"Stapleton, Port Richmond"
-   },
-   {  
-      "1970":"85985",
-      "1980":"105128",
-      "1990":"113944",
-      "2000":"127071",
-      "2010":"132003",
-      "district":"Staten Island",
-      "details":"New Springville, South Beach"
-   },
-   {  
-      "1970":"72815",
-      "1980":"108249",
-      "1990":"126956",
-      "2000":"152908",
-      "2010":"160209",
-      "district":"Staten Island",
-      "details":"Tottenville, Woodrow, Great Kills"
-   }
+[
+  {
+    "District": "Bronx",
+    "Details": "Melrose, Mott Haven, Port Morris",
+    "PopulationByYears": {
+      "1970": "138557",
+      "1980": "78441",
+      "1990": "77214",
+      "2000": "82159",
+      "2010": "91497"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Hunts Point, Longwood",
+    "PopulationByYears": {
+      "1970": "99493",
+      "1980": "34399",
+      "1990": "39443",
+      "2000": "46824",
+      "2010": "52246"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Morrisania, Crotona Park East",
+    "PopulationByYears": {
+      "1970": "150636",
+      "1980": "53635",
+      "1990": "57162",
+      "2000": "68574",
+      "2010": "79762"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Highbridge, Concourse Village",
+    "PopulationByYears": {
+      "1970": "144207",
+      "1980": "114312",
+      "1990": "119962",
+      "2000": "139563",
+      "2010": "146441"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "University Hts., Fordham, Mt. Hope",
+    "PopulationByYears": {
+      "1970": "121807",
+      "1980": "107995",
+      "1990": "118435",
+      "2000": "128313",
+      "2010": "128200"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "East Tremont, Belmont",
+    "PopulationByYears": {
+      "1970": "114137",
+      "1980": "65016",
+      "1990": "68061",
+      "2000": "75688",
+      "2010": "83268"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Bedford Park, Norwood, Fordham",
+    "PopulationByYears": {
+      "1970": "113764",
+      "1980": "116827",
+      "1990": "128588",
+      "2000": "141411",
+      "2010": "139286"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Riverdale, Kingsbridge, Marble Hill",
+    "PopulationByYears": {
+      "1970": "103543",
+      "1980": "98275",
+      "1990": "97030",
+      "2000": "101332",
+      "2010": "101731"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Soundview, Parkchester",
+    "PopulationByYears": {
+      "1970": "166442",
+      "1980": "167627",
+      "1990": "155970",
+      "2000": "167859",
+      "2010": "172298"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Throgs Nk., Co-op City, Pelham Bay",
+    "PopulationByYears": {
+      "1970": "84948",
+      "1980": "106516",
+      "1990": "108093",
+      "2000": "115948",
+      "2010": "120392"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Pelham Pkwy, Morris Park, Laconia",
+    "PopulationByYears": {
+      "1970": "105980",
+      "1980": "99080",
+      "1990": "97842",
+      "2000": "110706",
+      "2010": "113232"
+    }
+  },
+  {
+    "District": "Bronx",
+    "Details": "Wakefield, Williamsbridge",
+    "PopulationByYears": {
+      "1970": "135010",
+      "1980": "128226",
+      "1990": "129620",
+      "2000": "149077",
+      "2010": "152344"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Williamsburg, Greenpoint",
+    "PopulationByYears": {
+      "1970": "179390",
+      "1980": "142942",
+      "1990": "155972",
+      "2000": "160338",
+      "2010": "173083"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Brooklyn Heights, Fort Greene",
+    "PopulationByYears": {
+      "1970": "110221",
+      "1980": "92732",
+      "1990": "94534",
+      "2000": "98620",
+      "2010": "99617"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Bedford Stuyvesant",
+    "PopulationByYears": {
+      "1970": "203380",
+      "1980": "133379",
+      "1990": "138696",
+      "2000": "143867",
+      "2010": "152985"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Bushwick",
+    "PopulationByYears": {
+      "1970": "137902",
+      "1980": "92497",
+      "1990": "102572",
+      "2000": "104358",
+      "2010": "112634"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "East New York, Starrett City",
+    "PopulationByYears": {
+      "1970": "170791",
+      "1980": "154931",
+      "1990": "161350",
+      "2000": "173198",
+      "2010": "182896"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Park Slope, Carroll Gardens",
+    "PopulationByYears": {
+      "1970": "138933",
+      "1980": "110228",
+      "1990": "102724",
+      "2000": "104054",
+      "2010": "104709"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Sunset Park, Windsor Terrace",
+    "PopulationByYears": {
+      "1970": "111607",
+      "1980": "98567",
+      "1990": "102553",
+      "2000": "120063",
+      "2010": "126230"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Crown Heights North",
+    "PopulationByYears": {
+      "1970": "121821",
+      "1980": "88796",
+      "1990": "96400",
+      "2000": "96076",
+      "2010": "96317"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Crown Heights South, Wingate",
+    "PopulationByYears": {
+      "1970": "101047",
+      "1980": "96669",
+      "1990": "110715",
+      "2000": "104014",
+      "2010": "98429"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Bay Ridge, Dyker Heights",
+    "PopulationByYears": {
+      "1970": "129822",
+      "1980": "118187",
+      "1990": "110612",
+      "2000": "122542",
+      "2010": "124491"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Bensonhurst, Bath Beach ",
+    "PopulationByYears": {
+      "1970": "170119",
+      "1980": "155072",
+      "1990": "149994",
+      "2000": "172129",
+      "2010": "181981"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Borough Park, Ocean Parkway",
+    "PopulationByYears": {
+      "1970": "166301",
+      "1980": "155899",
+      "1990": "160018",
+      "2000": "185046",
+      "2010": "191382"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Coney Island, Brighton Beach",
+    "PopulationByYears": {
+      "1970": "97750",
+      "1980": "100030",
+      "1990": "102596",
+      "2000": "106120",
+      "2010": "104278"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Flatbush, Midwood",
+    "PopulationByYears": {
+      "1970": "137041",
+      "1980": "143859",
+      "1990": "159825",
+      "2000": "168806",
+      "2010": "160664"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Sheepshead Bay, Gerritsen Beach",
+    "PopulationByYears": {
+      "1970": "164815",
+      "1980": "149572",
+      "1990": "143477",
+      "2000": "160319",
+      "2010": "159650"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Brownsville, Ocean Hill",
+    "PopulationByYears": {
+      "1970": "122589",
+      "1980": "73801",
+      "1990": "84923",
+      "2000": "85343",
+      "2010": "86468"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "East Flatbush, Rugby, Farragut",
+    "PopulationByYears": {
+      "1970": "149496",
+      "1980": "154596",
+      "1990": "161261",
+      "2000": "165753",
+      "2010": "155252"
+    }
+  },
+  {
+    "District": "Brooklyn",
+    "Details": "Canarsie, Flatlands",
+    "PopulationByYears": {
+      "1970": "188643",
+      "1980": "169092",
+      "1990": "162428",
+      "2000": "194653",
+      "2010": "193543"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Battery Park City, Tribeca",
+    "PopulationByYears": {
+      "1970": "7706",
+      "1980": "15918",
+      "1990": "25366",
+      "2000": "34420",
+      "2010": "60978"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Greenwich Village, Soho",
+    "PopulationByYears": {
+      "1970": "84337",
+      "1980": "87069",
+      "1990": "94105",
+      "2000": "93119",
+      "2010": "90016"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Lower East Side, Chinatown",
+    "PopulationByYears": {
+      "1970": "181845",
+      "1980": "154848",
+      "1990": "161617",
+      "2000": "164407",
+      "2010": "163277"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Chelsea, Clinton",
+    "PopulationByYears": {
+      "1970": "83601",
+      "1980": "82164",
+      "1990": "84431",
+      "2000": "87479",
+      "2010": "103245"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Midtown Business District",
+    "PopulationByYears": {
+      "1970": "31076",
+      "1980": "39544",
+      "1990": "43507",
+      "2000": "44028",
+      "2010": "51673"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Stuyvesant Town, Turtle Bay",
+    "PopulationByYears": {
+      "1970": "122465",
+      "1980": "127554",
+      "1990": "133748",
+      "2000": "136152",
+      "2010": "142745"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "West Side, Upper West Side",
+    "PopulationByYears": {
+      "1970": "212422",
+      "1980": "206669",
+      "1990": "210993",
+      "2000": "207699",
+      "2010": "209084"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Upper East Side",
+    "PopulationByYears": {
+      "1970": "200851",
+      "1980": "204305",
+      "1990": "210880",
+      "2000": "217063",
+      "2010": "219920"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Manhattanville, Hamilton Heights",
+    "PopulationByYears": {
+      "1970": "113606",
+      "1980": "103038",
+      "1990": "106978",
+      "2000": "111724",
+      "2010": "110193"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Central Harlem",
+    "PopulationByYears": {
+      "1970": "159267",
+      "1980": "105641",
+      "1990": "99519",
+      "2000": "107109",
+      "2010": "115723"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "East Harlem",
+    "PopulationByYears": {
+      "1970": "154662",
+      "1980": "114569",
+      "1990": "110508",
+      "2000": "117743",
+      "2010": "120511"
+    }
+  },
+  {
+    "District": "Manhattan",
+    "Details": "Washington Heights, Inwood",
+    "PopulationByYears": {
+      "1970": "180561",
+      "1980": "179941",
+      "1990": "198192",
+      "2000": "208414",
+      "2010": "190020"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Astoria, Long Island City",
+    "PopulationByYears": {
+      "1970": "185925",
+      "1980": "185198",
+      "1990": "188549",
+      "2000": "211220",
+      "2010": "191105"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Sunnyside, Woodside",
+    "PopulationByYears": {
+      "1970": "95073",
+      "1980": "88927",
+      "1990": "94845",
+      "2000": "109920",
+      "2010": "113200"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Jackson Heights, North Corona",
+    "PopulationByYears": {
+      "1970": "123635",
+      "1980": "122090",
+      "1990": "128924",
+      "2000": "169083",
+      "2010": "171576"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Elmhurst, South Corona",
+    "PopulationByYears": {
+      "1970": "108233",
+      "1980": "118430",
+      "1990": "137023",
+      "2000": "167005",
+      "2010": "172598"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Ridgewood, Glendale, Maspeth",
+    "PopulationByYears": {
+      "1970": "161022",
+      "1980": "150142",
+      "1990": "149126",
+      "2000": "165911",
+      "2010": "169190"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Forest Hills, Rego Park",
+    "PopulationByYears": {
+      "1970": "120429",
+      "1980": "112245",
+      "1990": "106996",
+      "2000": "115967",
+      "2010": "113257"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Flushing, Bay Terrace",
+    "PopulationByYears": {
+      "1970": "207589",
+      "1980": "204785",
+      "1990": "220508",
+      "2000": "242952",
+      "2010": "247354"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Fresh Meadows, Briarwood",
+    "PopulationByYears": {
+      "1970": "142468",
+      "1980": "125312",
+      "1990": "132101",
+      "2000": "146594",
+      "2010": "151107"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Woodhaven, Richmond Hill",
+    "PopulationByYears": {
+      "1970": "110367",
+      "1980": "109505",
+      "1990": "112151",
+      "2000": "141608",
+      "2010": "143317"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Ozone Park, Howard Beach",
+    "PopulationByYears": {
+      "1970": "113857",
+      "1980": "105651",
+      "1990": "107768",
+      "2000": "127274",
+      "2010": "122396"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Bayside, Douglaston, Little Neck",
+    "PopulationByYears": {
+      "1970": "127883",
+      "1980": "110963",
+      "1990": "108056",
+      "2000": "116404",
+      "2010": "116431"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Jamaica, St. Albans, Hollis",
+    "PopulationByYears": {
+      "1970": "206639",
+      "1980": "189383",
+      "1990": "201293",
+      "2000": "223602",
+      "2010": "225919"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "Queens Village, Rosedale",
+    "PopulationByYears": {
+      "1970": "184647",
+      "1980": "173178",
+      "1990": "177535",
+      "2000": "196284",
+      "2010": "188593"
+    }
+  },
+  {
+    "District": "Queens",
+    "Details": "The Rockaways, Broad Channel",
+    "PopulationByYears": {
+      "1970": "98228",
+      "1980": "100592",
+      "1990": "100596",
+      "2000": "106686",
+      "2010": "114978"
+    }
+  },
+  {
+    "District": "Staten Island",
+    "Details": "Stapleton, Port Richmond",
+    "PopulationByYears": {
+      "1970": "135875",
+      "1980": "138489",
+      "1990": "137806",
+      "2000": "162609",
+      "2010": "175756"
+    }
+  },
+  {
+    "District": "Staten Island",
+    "Details": "New Springville, South Beach",
+    "PopulationByYears": {
+      "1970": "85985",
+      "1980": "105128",
+      "1990": "113944",
+      "2000": "127071",
+      "2010": "132003"
+    }
+  },
+  {
+    "District": "Staten Island",
+    "Details": "Tottenville, Woodrow, Great Kills",
+    "PopulationByYears": {
+      "1970": "72815",
+      "1980": "108249",
+      "1990": "126956",
+      "2000": "152908",
+      "2010": "160209"
+    }
+  }
 ]
