@@ -3,6 +3,6 @@
 
     public class RequestDTO
     {
-        public Years Years { get; set; }
+        public Year Year { get; set; }
     }
 }

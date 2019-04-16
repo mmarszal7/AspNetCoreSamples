@@ -1,6 +1,6 @@
 ﻿namespace MongoCRUD.Model
 {
-    public enum Years
+    public enum Year
     {
         Seventies = 1970,
         Eighties = 1980,

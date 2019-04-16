@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.OData;
+﻿using AutoMapper;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using MongoCRUD.Model;
 using MongoDB.Driver;
@@ -35,6 +36,18 @@ namespace MongoCRUD.Controllers
         {
             MongoDatabase.GetCollection<Population>("Population")
                 .ReplaceOneAsync(x => (x.District + x.Details).Equals((entity.District + entity.Details)), entity, new UpdateOptions { IsUpsert = true });
+        }
+
+        // POST api/populationForYear
+        [HttpPost]
+        public ResponseDTO GetPopulationForYear([FromBody] RequestDTO request)
+        {
+            var population = MongoDatabase.GetCollection<Population>("Population")
+                .AsQueryable()
+                .ToList();
+
+            var response = Mapper.Map<ResponseDTO>(population);
+            return response;
         }
     }
 }

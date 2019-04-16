@@ -21,7 +21,6 @@ MongoCrud:
 - [Docker](http://tattoocoder.com/using-asp-net-core-with-mongodb-in-containers-for-local-dev-cosmosdb-for-production/)
 
 # Plans:
-- nuget.config
 - ElasticSearch
 - publish/subscribe with Redis & RabbitMQ (RawRabbit)
 - make notes about used services: Mongo, RabbitMQ, ElasticSearch
