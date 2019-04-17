@@ -30,7 +30,10 @@ namespace MongoCRUD
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                // PascalCase reponse 
+                .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver())
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // Swagger
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
@@ -69,7 +72,18 @@ namespace MongoCRUD
             });
 
             // Automapper
-            Mapper.Initialize(cfg => cfg.CreateMap<Population, ResponseDTO>());
+            Mapper.Initialize(cfg =>
+                cfg.CreateMap<Population, ResponseDTO>()
+                    .ForMember(d => d.Area, opt => opt.MapFrom(src => src.District))
+                    .ForMember(d => d.Year1970, opt => opt.MapFrom(src => src.Year["1970"]))
+                    .ForMember(d => d.Year1980, opt => opt.MapFrom(src => src.Year["1980"]))
+                    .ForMember(d => d.Year1990, opt => opt.MapFrom(src => src.Year["1990"]))
+                    .ForMember(d => d.Year2000, opt => opt.MapFrom(src => src.Year["2000"]))
+                    .ForMember(d => d.Year2010, opt => opt.MapFrom(src => src.Year["2010"]))
+                    .ForMember(d => d.Max, opt => opt.MapFrom(src => new Dictionary<string, int>() { { src.Year.First(y => y.Value.Equals(src.Year.Values.Max())).Key, src.Year.Values.Max() } }))
+                    .ForMember(d => d.Min, opt => opt.MapFrom(src => new Dictionary<string, int>() { { src.Year.First(y => y.Value.Equals(src.Year.Values.Min())).Key, src.Year.Values.Min() } }))
+                    .ForMember(d => d.Average, opt => opt.MapFrom(src => src.Year.Values.Average()))
+            );
 
             app.UseMvc(routeBuilder =>
             {
@@ -97,7 +111,8 @@ namespace MongoCRUD
             var population = JsonConvert.DeserializeObject<List<Population>>(json);
             MongoDatabase.DropCollection("Population");
             MongoDatabase.GetCollection<Population>("Population")
-                .InsertManyAsync(population);
+                .InsertManyAsync(population)
+                .Wait();
         }
     }
 }
