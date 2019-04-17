@@ -20,10 +20,21 @@ namespace MongoCRUD.Controllers
 
         }
 
-        // GET api/mongo
-        // OData example: /api/mongo?$select=Id,Value&$OrderBy=Timestamp&$Filter=Id lt 3
+        //GET api/mongo
+        //OData example: /api/mongo/odata?$select=Value,Timestamp&$OrderBy=Timestamp&$Filter=Id lt 3 and Id ge 1
         [HttpGet]
         [EnableQuery()]
+        [Route("odata")]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public ActionResult<IEnumerable<Record>> GetOData()
+        {
+            return MongoDatabase.GetCollection<Record>("Records")
+                .AsQueryable()
+                .ToList();
+        }
+
+        // GET api/mongo
+        [HttpGet]
         public ActionResult<IEnumerable<Record>> Get()
         {
             return MongoDatabase.GetCollection<Record>("Records")

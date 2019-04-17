@@ -1,13 +1,17 @@
 ﻿using AutoMapper;
 using Microsoft.AspNet.OData.Extensions;
+using Microsoft.AspNet.OData.Formatter;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Net.Http.Headers;
 using MongoCRUD.Model;
 using MongoDB.Driver;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +32,9 @@ namespace MongoCRUD
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            // Swagger
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
+
             // MongoDB - default connectionString: mongodb://localhost:27017
             var mongoClient = new MongoClient(Configuration["MongoConnection"]);
             var db = mongoClient.GetDatabase("demoDatabase");
@@ -36,6 +43,15 @@ namespace MongoCRUD
 
             // OData
             services.AddOData();
+
+            // OData + Swagger workaround (good enough for testing purposes ONLY!)
+            services.AddMvcCore(options =>
+            {
+                foreach (var outputFormatter in options.OutputFormatters.OfType<ODataOutputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
+                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
+                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -44,6 +60,13 @@ namespace MongoCRUD
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API docs");
+            });
 
             // Automapper
             Mapper.Initialize(cfg => cfg.CreateMap<Population, ResponseDTO>());
