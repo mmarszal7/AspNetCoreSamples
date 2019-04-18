@@ -6,7 +6,7 @@ SignalRChat:
 - basic and advanced usage of SignalR in .NET and JS
 
 RedisCache:
-- Swagger 
+- Swagger
 - CORS
 - Caching:
 	- distributed - via Redis
@@ -23,5 +23,5 @@ MongoCrud:
 
 # Plans:
 - ElasticSearch
-- publish/subscribe with Redis & RabbitMQ (RawRabbit)
-- make notes about used services: Mongo, RabbitMQ, ElasticSearch
+- publish/subscribe: RabbitMQ, Redis, MediatR 
+- GraphQL
