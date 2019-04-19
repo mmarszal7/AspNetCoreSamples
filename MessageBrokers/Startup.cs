@@ -1,3 +1,4 @@
+using MediatR;
 using MessageBrokers.Components;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +14,9 @@ namespace MessageBrokers
                 .AddNewtonsoftJson();
 
             services.AddRazorComponents();
+
+            // MediatR
+            services.AddMediatR();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

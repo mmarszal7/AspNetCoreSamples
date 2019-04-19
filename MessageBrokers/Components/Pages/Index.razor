@@ -1,4 +1,14 @@
 ﻿@page "/"
+@using MediatR
+@using MessageBrokers.Notifications
+@inject IMediator Mediator
+
+@functions {
+    protected override async Task OnInitAsync()
+    {
+        Mediator.Publish(new Event() { Message = "Demo Message" });
+    }
+}
 
 <h1>Events</h1>
 
