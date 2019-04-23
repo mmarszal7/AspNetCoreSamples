@@ -3,18 +3,22 @@
 @using MessageBrokers.Notifications
 @inject IMediator Mediator
 
+<section id="main" role="main">
+    <div class="chat">
+        <i class="avatar face12"></i>
+        <input type="text" placeholder="Type your message...">
+        <button>Send</button>
+    </div>
+
+    <p class="presence"></p>
+    <div class="output">
+        <p><i class="material-icons">home</i><span>Test message</span></p>
+    </div>
+</section>
+
 @functions {
     protected override async Task OnInitAsync()
     {
-        Mediator.Publish(new Event() { Message = "Demo Message" });
+        Mediator.Publish(new Command() { Message = "Demo Message" });
     }
 }
-
-<h1>Events</h1>
-
-<ol>
-    <li>SignalR</li>
-    <li>MediatR</li>
-    <li>Redis publish/subscribe</li>
-    <li>RabbitMQ</li>
-</ol>
