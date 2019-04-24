@@ -6,19 +6,28 @@
 <section id="main" role="main">
     <div class="chat">
         <i class="avatar face12"></i>
-        <input type="text" placeholder="Type your message...">
-        <button>Send</button>
+        <input type="text" placeholder="Type your message..." bind="@messageInput" />
+        <button onclick="@SendMessage">Send</button>
     </div>
 
     <p class="presence"></p>
     <div class="output">
-        <p><i class="material-icons">home</i><span>Test message</span></p>
+        @foreach (var message in messages)
+        {
+            <p><i class="material-icons">home</i><span>@message</span></p>
+        }
     </div>
 </section>
 
 @functions {
-    protected override async Task OnInitAsync()
+
+    string messageInput = "";
+
+    List<string> messages = new List<string>();
+
+    void SendMessage()
     {
-        Mediator.Publish(new Command() { Message = "Demo Message" });
+        Mediator.Publish(new Command() { Message = messageInput });
+        messages.Add(messageInput);
     }
 }
