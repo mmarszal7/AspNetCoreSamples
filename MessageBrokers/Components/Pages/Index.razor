@@ -1,7 +1,9 @@
 ﻿@page "/"
 @using MediatR
 @using MessageBrokers.Notifications
+@using MessageBrokers.Services
 @inject IMediator Mediator
+@inject RabbitListener RabbitListener
 
 <section id="main" role="main">
     <div class="chat">
@@ -27,6 +29,7 @@
 
     void SendMessage()
     {
+        RabbitListener.Register();
         Mediator.Publish(new Command() { Message = messageInput });
         messages.Add(messageInput);
     }

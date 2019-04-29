@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <_RazorComponentInclude>Components\**\*.cshtml</_RazorComponentInclude>
+    <UserSecretsId>2941175e-4963-4676-baa7-b14a34ba7856</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

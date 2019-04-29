@@ -38,7 +38,7 @@ To start needed services (Mongo, Redis, RabbitMQ) just run:
 - <strike>MediatR</strike> - it Mediator/**CQRS** library, not Message Broker
 - <strike>Redis (publish/subscribe)</strike>
 - [MediatR](https://ardalis.com/using-mediatr-in-aspnet-core-apps) (as a CQRS library)
-- RabbitMQ
+- [RabbitMQ](https://www.rabbitmq.com/getstarted.html)
 
 # Plans:
 
