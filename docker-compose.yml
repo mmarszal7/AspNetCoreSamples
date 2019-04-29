@@ -1,29 +1,18 @@
-version: '3.4'
-
-networks:
-  mongoCRUDnetwork:
-    driver: bridge
+version: "3.5"
 
 services:
-
   mongo:
-    container_name: mongo
     image: mongo
-    restart: always
     ports:
-      - 27017:27017
-    networks:
-      - mongoCRUDnetwork
-    
-  mongocrud:
-    image: mongocrud
-    restart: always
-    build:
-      context: .
-      dockerfile: MongoCRUD/Dockerfile
+      - '27017:27017'
+
+  rabbitmq:
+    image: rabbitmq:3-management
     ports:
-      - "63465:80"
-    environment:
-      MongoConnection: "mongodb://localhost:27017"
-    networks:
-      - mongoCRUDnetwork
+      - '5672:5672'
+      - '15672:15672'
+
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'

@@ -2,6 +2,12 @@
 
 Collection of ASP.NET Core projects caintaining configuration and simple usage of selected .NET services/packages (SignalR, OData, Swagger etc.)
 
+# How to run:
+
+To start needed services (Mongo, Redis, RabbitMQ) just run:
+
+> docker-compose up
+
 # Done:
 
 **1. SignalRChat**:
@@ -20,7 +26,7 @@ Collection of ASP.NET Core projects caintaining configuration and simple usage o
 
 **3. MongoCrud**:
 
-- MongoDB.Driver CRUD
+- MongoDB CRUD
 - [OData](https://www.youtube.com/watch?v=ZCDWUBOJ5FU&list=PL17WHdN9gS1uXtfhSPjGwIxAGGUJqFPWx&index=46&t=0s)
 - [AutoMapper](https://automapper.readthedocs.io/en/latest/Getting-started.html) - Entities <-> DTO
 - [Docker](http://tattoocoder.com/using-asp-net-core-with-mongodb-in-containers-for-local-dev-cosmosdb-for-production/)
