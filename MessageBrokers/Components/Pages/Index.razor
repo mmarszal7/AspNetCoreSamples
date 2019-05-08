@@ -27,10 +27,19 @@
 
     List<string> messages = new List<string>();
 
+    protected override async Task OnInitAsync()
+    {
+        RabbitListener.Register("demoQueue", Callback);
+    }
+
     void SendMessage()
     {
-        RabbitListener.Register();
+        RabbitListener.Send("demoQueue", messageInput);
         Mediator.Publish(new Command() { Message = messageInput });
-        messages.Add(messageInput);
+    }
+
+    void Callback(string message)
+    {
+        messages.Add(message);
     }
 }
