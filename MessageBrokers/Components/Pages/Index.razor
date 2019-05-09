@@ -1,9 +1,7 @@
 ﻿@page "/"
 @using MediatR
 @using MessageBrokers.Notifications
-@using MessageBrokers.Services
 @inject IMediator Mediator
-@inject RabbitListener RabbitListener
 
 <section id="main" role="main">
     <div class="chat">
@@ -27,15 +25,14 @@
 
     List<string> messages = new List<string>();
 
-    protected override async Task OnInitAsync()
+    protected override async Task OnAfterRenderAsync()
     {
-        RabbitListener.Register("demoQueue", Callback);
+        await Mediator.Publish(new SubscribeOnQueueCommand() { QueueName = "demoQueue", Callback = Callback });
     }
 
     void SendMessage()
     {
-        RabbitListener.Send("demoQueue", messageInput);
-        Mediator.Publish(new Command() { Message = messageInput });
+        Mediator.Publish(new SendMessageToQueueCommand() { QueueName = "demoQueue", Message = messageInput });
     }
 
     void Callback(string message)
