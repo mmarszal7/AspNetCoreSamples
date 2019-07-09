@@ -39,6 +39,7 @@ namespace MongoCRUD
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Title = "API docs", Version = "v1" }));
 
             // MongoDB - default connectionString: mongodb://localhost:27017
+            // MongoDB - docker connectionString: mongodb://mongo:27017
             var mongoClient = new MongoClient(Configuration["MongoConnection"]);
             var db = mongoClient.GetDatabase("demoDatabase");
             services.AddScoped<IMongoDatabase>(_ => db);

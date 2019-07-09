@@ -3,8 +3,14 @@ version: "3.5"
 services:
   mongo:
     image: mongo
+
+  mongocrud:
+    image: ${DOCKER_REGISTRY-}mongocrud
+    build:
+      context: .
+      dockerfile: MongoCRUD/Dockerfile
     ports:
-      - '27017:27017'
+      - '5000:5000'
 
   rabbitmq:
     image: rabbitmq:3-management
