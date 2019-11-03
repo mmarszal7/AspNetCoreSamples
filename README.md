@@ -42,4 +42,4 @@ To start needed services (Mongo, Redis, RabbitMQ) just run:
 
 # Plans:
 
-- ElasticSearch
+- ElasticSearch + Kibana
