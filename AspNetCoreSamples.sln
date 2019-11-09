@@ -18,6 +18,8 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageBrokers", "MessageBrokers\MessageBrokers.csproj", "{D2CBA3EC-221F-452E-9E13-B722751FD3FE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnomalyDetection", "AnomalyDetection\AnomalyDetection.csproj", "{7F0863BB-802A-4D07-8FA6-2CBCD2FD422C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{D2CBA3EC-221F-452E-9E13-B722751FD3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2CBA3EC-221F-452E-9E13-B722751FD3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2CBA3EC-221F-452E-9E13-B722751FD3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0863BB-802A-4D07-8FA6-2CBCD2FD422C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0863BB-802A-4D07-8FA6-2CBCD2FD422C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0863BB-802A-4D07-8FA6-2CBCD2FD422C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0863BB-802A-4D07-8FA6-2CBCD2FD422C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
